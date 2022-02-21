@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig-base.json",
+  "references": [{ "path": "../b/tsconfig.json" }],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@company/b": ["../b/b.ts"],
+      "@company/b/*": ["../b/src/*"]
+    }
+  }
+  // NB: we don't need the compilerOptions.outDir Windows workaround here
+  // because there is no project that references this one.
+}
